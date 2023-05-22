@@ -1,2 +1,0 @@
-# portafolio
- Para mostrar plantillas
