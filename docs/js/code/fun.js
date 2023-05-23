@@ -1,17 +1,7 @@
-var URERS = [{
-	nombre: "nombre",
-	email: "email",
-	pass: "pass",
-}];
-var COOKE = {
-	nombre: "nombre",
-	email: "email",
-	pass: "pass",
-};
+var URERS = [];
+var COOKE = [];
 var URER = {
-	nombre: "nombre",
-	email: "email",
-	pass: "pass",
+	nombre: "",
 };
 
 
@@ -62,23 +52,15 @@ function guardarMatrizEnLocalStorage(clave, matriz) {
 }
 // Función para recuperar una matriz de objetos de localStorage
 function recuperarMatrizDeLocalStorage(clave) {
-	console.log(localStorage.length);
-
-	// if (localStorage.length == 0) {
-	// 	insertaUsuario("nombre", "email", "pass");
-	// }
-	console.log(localStorage.getItem(clave));
 	var matrizString = localStorage.getItem(clave);
 	return JSON.parse(matrizString);
 }
 
 function insertaUsuario(nombre, email, pass) {
-
-	// var URERS = " ";
-
-	URERS = recuperarMatrizDeLocalStorage("USERS");
-
-	console.log(USERS);
+	URERS = [];
+	if (recuperarMatrizDeLocalStorage("USERS")) {
+		URERS = recuperarMatrizDeLocalStorage("USERS");
+	}
 	var no_existe = true;
 	for (var i = 0; i < URERS.length; i++) {
 		if (URERS[i].email == email) {
@@ -118,7 +100,7 @@ function insertaUsuario(nombre, email, pass) {
 	}
 };
 
-function registro(nombre, email, pass) {
+function registro(email, pass) {
 	URERS = [];
 	if (recuperarMatrizDeLocalStorage("USERS")) {
 		URERS = recuperarMatrizDeLocalStorage("USERS");
