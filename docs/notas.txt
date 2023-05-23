@@ -4,5 +4,3 @@ https://caleman9791.github.io/portafolio/
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
 ok
-
-http://localhost/Proyectos/caleman9791/portafolio/docs/index.html
