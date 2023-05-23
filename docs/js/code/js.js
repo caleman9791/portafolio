@@ -1,11 +1,21 @@
 window.addEventListener("load", function (event) {
+
+	let enlace = document.querySelectorAll("a");
+	for (var i = 0; i < enlace.length; i++) {
+
+		enlace[i].addEventListener("click", (event) => {
+			event.preventDefault();
+			console.log(event.target);
+			console.log(event.target.tagName);
+
+
+		});
+	}
+
+	// localStorage.clear();
+	//	console.log(localStorage.length);
 	let ultimoValor = obtenerUltimoValorURLSinExtension();
 	agregarScript(ultimoValor);
-	// document.body.style.visibility = "hidden";
-	// eliminarCookie("USER");
-	console.log("CARGARO");
-
-	console.log(pagina()); // Imprime el último valor de la URL en la consola
 
 	//  Al cargar #Inicio  
 	if (ultimoValor != "login" || ultimoValor != "register") {
@@ -16,20 +26,19 @@ window.addEventListener("load", function (event) {
 		if (getCookieValue("USER")) {
 			COOKE = getCookieValue("USER");
 			URER.nombre = COOKE.nombre;
-			console.log(URER.nombre);
-			// let user_info = document.querySelector(".user-info");
-			// elimina_nodos(user_info);
-			// var _div = document.createElement('div');
-			// _div.textContent = URER.nombre;
-			// user_info.appendChild(_div);
+
 		} else {
-			console.log("No existe la COOKE");
+			//	console.log("No existe la COOKE");
 			// window.location.href = "./login.html";
 		};
 
 		// window.location.href = "./index.html";
 		// document.body.style.visibility = "visible";
 	} else {
+		// if (ultimoValor == "register") {
+		// 	registro();
+
+		// }
 		// document.body.style.visibility = "visible";
 	}
 });
