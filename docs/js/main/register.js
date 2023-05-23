@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // alert("message?: DOMString");
 
 function registro(arguments) {
@@ -70,6 +69,3 @@ function registro(arguments) {
 
 }
 registro();
-=======
-console.log(pagina());
->>>>>>> 4bc57c5db64dd77eda1da4c43cca087d34d2c12d
