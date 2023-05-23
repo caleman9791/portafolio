@@ -117,6 +117,79 @@ function insertaUsuario(nombre, email, pass) {
 		// console.log("existe");
 	}
 };
+
+function inicioSecion(email, pass) {
+	URERS = [];
+
+	if (recuperarMatrizDeLocalStorage("USERS")) {
+		URERS = recuperarMatrizDeLocalStorage("USERS");
+	}
+
+	if (URER.length >= 1) {
+		// //////////////////////////////////////
+		for (var i = 0; i < URERS.length; i++) {
+
+			if (URERS[i].email == email && URERS[i].pass == pass) {
+
+				URER = {
+					nombre: USERS.nombre,
+					email: USERS.email,
+					// pass: USERS.pass,
+				};
+
+			}
+
+		}
+		// ///////////////////////////////////////
+
+	}
+}
+
+function inicioSecion(email, pass) {
+	URERS = [];
+	if (recuperarMatrizDeLocalStorage("USERS")) {
+		URERS = recuperarMatrizDeLocalStorage("USERS");
+	}
+	URER = false;
+	for (var i = 0; i < URERS.length; i++) {
+		if (URERS[i].email == email && URERS[i].pass == pass) {
+			URER = {
+				nombre: USERS.nombre,
+				email: USERS.email,
+				// pass: USERS.pass,
+			};
+		}
+	}
+	if (URER) {
+		crearCookie("USER", JSON.stringify(URER), 5);
+		if (recuperarMatrizDeLocalStorage("USERS")) {
+			URERS = recuperarMatrizDeLocalStorage("USERS");
+		} else {
+			URERS = [];
+		}
+		URERS.push(data);
+		guardarMatrizEnLocalStorage("USERS", URERS);
+		// URERS = recuperarMatrizDeLocalStorage("USERS");
+		let $data = recuperarMatrizDeLocalStorage("USERS");
+		URERS = [];
+		for (var i = 0; i < $data.length; i++) {
+			if (typeof $data[i].nombre == "string"
+				&& typeof $data[i].email == "string"
+				&& typeof $data[i].email == "string") {
+				URERS.push($data[i]);
+			}
+		}
+		guardarMatrizEnLocalStorage("USERS", URERS);
+		$data = recuperarMatrizDeLocalStorage("USERS");
+		console.log($data);
+		crearCookie("USER", JSON.stringify(data), 5);
+		// window.location.href = "./index.html";
+		return true;
+	} else {
+		// window.location.href = "./register.html";
+		// console.log("existe");
+	}
+}
 // //////////////////////////////////////////////////////////
 function agregarScript(url) {
 	let script = document.createElement('script'); // Crear el elemento <script>
