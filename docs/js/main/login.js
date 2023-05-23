@@ -8,18 +8,18 @@ function login() {
 		// let txt_nombre = document.getElementById("txt_nombre");
 		let txt_email = document.getElementById("exampleInputEmail1");
 		let txt_password = document.getElementById("exampleInputPassword1");
-		console.log(btn_login);
+
 		btn_login.addEventListener("click", function (e) {
 			e.preventDefault();
-			console.log(this);
+			console.log('ok');
 
 			if (txt_email.value != ""
 				&& txt_password.value != "") {
 				if (inicioSecion(txt_email.value, txt_password.value)) {
-					// console.log('ok');
+					console.log('ok');
 					// window.location.href = "./index.html";
 				} else {
-					// console.log('existe');
+					console.log('existe');
 				}
 			} else {
 				console.log('algo salio mal campos vacios ');
