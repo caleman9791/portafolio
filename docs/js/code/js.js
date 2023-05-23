@@ -5,22 +5,19 @@ var URER = {
 };
 // //////////////////////////////////////////////////////////////////////////////////////
 
-
 function agregarScript(url) {
-
 
 	let script = document.createElement('script'); // Crear el elemento <script>
 	let fun_script = document.createElement('script'); // Crear el elemento <script>
-	fun_script.src = `./js/fun/js.js`;
-	script.src = `./js/${url}.js`;
+	fun_script.src = `./js/code/fun.js`;
+	script.src = `./js/main/${url}.js`;
 	console.log(fun_script.src);
 	console.log(script.src); // Asignar la URL al atributo src del elemento <script>
 	document.body.appendChild(fun_script);
 	document.body.appendChild(script); // Agregar el elemento <script> al <body> del documento
 }
 
-function obtenerUltimoValorURLSinExtension() {
-
+function pagina() {
 
 	var url = window.location.href; // Obtener la URL actual
 	var partes = url.split('/'); // Dividir la URL por "/"
@@ -28,30 +25,35 @@ function obtenerUltimoValorURLSinExtension() {
 	var ultimoValor = ultimoValorConExtension.split('.')[0]; // Eliminar la extensión
 	return ultimoValor;
 
+}
+
+function obtenerUltimoValorURLSinExtension() {
+
+	var url = window.location.href; // Obtener la URL actual
+	var partes = url.split('/'); // Dividir la URL por "/"
+	var ultimoValorConExtension = partes[partes.length - 1]; // Obtener el último valor con extensión
+	var ultimoValor = ultimoValorConExtension.split('.')[0]; // Eliminar la extensión
+	return ultimoValor;
 
 }
 var ultimoValor = obtenerUltimoValorURLSinExtension();
 agregarScript(ultimoValor);
 
-
 // //////////////////////////////////////////////////////////////////////////////////////
-
 
 // localStorage.clear();
 
-
 window.addEventListener("load", function (event) {
 
-
-	document.body.style.visibility = "hidden";
+	// document.body.style.visibility = "hidden";
 	// eliminarCookie("USER");
 	console.log("CARGARO");
-	console.log(ultimoValor); // Imprime el último valor de la URL en la consola
+	// console.log(ultimoValor); // Imprime el último valor de la URL en la consola
 	// let ultimoValor = obtenerUltimoValorURLSinExtension();
 	//  Al cargar #Inicio  
-	if (ultimoValor != "login") {
+	if (ultimoValor != "login" || ultimoValor != "register") {
 		if (existeCookie("USER") == false) {
-			window.location.href = "./login.html";
+			// window.location.href = "./login.html";
 		}
 		let fa = document.querySelector(".fa-sign-out");
 		// let fa = document.querySelector(".fa-sign-out");
@@ -59,7 +61,7 @@ window.addEventListener("load", function (event) {
 		let btn_cerrar_cesion = document.getElementById("btn_cerrar_cesion");
 		btn_cerrar_cesion.addEventListener("click", function (e) {
 			e.preventDefault();
-			document.body.style.visibility = "hidden";
+			// document.body.style.visibility = "hidden";
 			if (existeCookie("USER")) {
 				eliminarCookie("USER");
 				location.reload();
@@ -79,8 +81,8 @@ window.addEventListener("load", function (event) {
 		_div.textContent = URER.nombre;
 		user_info.appendChild(_div);
 		// window.location.href = "./index.html";
-		document.body.style.visibility = "visible";
+		// document.body.style.visibility = "visible";
 	} else {
-		document.body.style.visibility = "visible";
+		// document.body.style.visibility = "visible";
 	}
 });
