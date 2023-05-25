@@ -1,8 +1,16 @@
 p {
 	/* 	font-weight: bold !important; */
-	color: black !important;
+	/* 	color: black !important; */
 }
 
 .sidebar-profile-text p {
 	color: white !important;
+}
+
+.mensaje_no_cooke {
+	display: none;
+}
+
+.w3-container * {
+	color: black !important;
 }
