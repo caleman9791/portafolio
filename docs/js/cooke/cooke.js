@@ -59,7 +59,23 @@ window.addEventListener("load", function () {
 				mensaje_no_cooke.style.display = "block";
 
 			} else {
-				alert("No existe boton");
+
+				// alert("No existe boton");
+				// <div class="w3-panel w3-pale-red w3-leftbar w3-border-red">
+				// <p>London is the most populous city in the United Kingdom,
+				// with a metropolitan area of over 9 million inhabitants.</p>
+				// </div>
+				let elementoNuevo = document.createElement("div");
+				let parr = document.createElement("p");
+				parr.textContent = "Esta sección tiene fallas "
+					+ "estaré actualizando periódicamente. "
+					+ "Gracias por visitar. Puedes escribirme a "
+					+ "la mensajería de esta pagina para mas información.";
+				elementoNuevo.setAttribute("class", "w3-panel w3-padding w3-pale-red w3-leftbar w3-border-red");
+				elementoNuevo.appendChild(parr);
+				let elementoPadre = document.querySelector(".content-wrapper");
+
+				elementoPadre.insertBefore(elementoNuevo, elementoPadre.firstChild);
 			}
 			console.log("NO COOKE");
 		}
