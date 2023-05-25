@@ -57,8 +57,10 @@ window.addEventListener("load", function () {
 	}
 	if (!(ultimoValor.toLowerCase == "inicio") || !(ultimoValor.toLowerCase == "registro")) {
 		if (existeCookie("USER")) {
-
+			let nav_profile_text = document.querySelector(".nav-profile-text p");
 			console.log(getCookieValue("USER"));
+			USER = getCookieValue("USER");
+			nav_profile_text.textContent = USER.nombre;
 		} else {
 			let mensaje_no_cooke = document.querySelector(".mensaje_no_cooke");
 
