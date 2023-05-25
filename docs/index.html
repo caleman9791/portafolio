@@ -17,12 +17,14 @@
 		<!-- inject:css -->
 		<!-- endinject -->
 		<!-- Layout styles -->
+		<link rel="shortcut icon" href="./assets/images/favicon.png"/>
+		<!-- End layout styles -->
 		<link rel="stylesheet" href="./assets/css/style.css"/>
+		<!-- @caleman9791 -->
 		<link rel="stylesheet" href="./css/w3css.css"/>
 		<link rel="stylesheet" href="./css/css.css"/>
-		<!-- End layout styles -->
-		<link rel="shortcut icon" href="./assets/images/favicon.png"/>
 		<script type="text/javascript" src="./js/chat.js"></script>
+		<!-- @caleman9791 -->
 	</head>
 	<body>
 		<div class="container-scroller">
@@ -531,7 +533,7 @@
 						</li>
 						<li class="nav-item sidebar-user-actions">
 							<div class="sidebar-user-menu">
-								<a href="#" class="nav-link">
+								<a id="cerrar_sesion" href="#" class="nav-link">
 									<i class="mdi mdi-logout menu-icon"></i>
 									<span class="menu-title">
 										Log Out
@@ -544,7 +546,9 @@
 				<!-- partial -->
 				<div class="main-panel">
 					<div class="content-wrapper">
+						<!-- NOTA: Contenedor  -->
 						<div class="w3-container">
+							<h3 class="mensaje_no_cooke"></h3>
 							<p>
 								Soy un apasionado programador de aplicaciones web con una amplia experiencia en el trabajo con bases de datos. Estoy aquí para ayudarte a alcanzar tus objetivos empresariales a través de soluciones digitales innovadoras y eficientes.
 							</p>
@@ -604,10 +608,12 @@
 		<script src="./assets/js/off-canvas.js"></script>
 		<script src="./assets/js/hoverable-collapse.js"></script>
 		<script src="./assets/js/misc.js"></script>
-		<script src="./js/js.js">
+		<script src="./js/cooke/cooke.js"></script>
+		<script src="./js/LocalDB/LocalDB.js">
 		</script>
-		<script src="./js/code/js.js">
-		</script>
+		<script src="./js/index/index.js"></script>
+		<!-- 	<script src="./js/code/js.js">
+			</script> -->
 		<!-- endinject -->
 		<!-- Custom js for this page -->
 		<!-- End custom js for this page -->
