@@ -22,7 +22,11 @@
 		<link rel="stylesheet" href="./css/css.css"/>
 		<!-- End layout styles -->
 		<link rel="shortcut icon" href="./assets/images/favicon.png"/>
+		<!-- @caleman9791 -->
+		<link rel="stylesheet" href="./css/w3css.css"/>
+		<link rel="stylesheet" href="./css/css.css"/>
 		<script type="text/javascript" src="./js/chat.js"></script>
+		<!-- @caleman9791 -->
 	</head>
 	<body>
 		<div class="container-scroller">
@@ -42,13 +46,16 @@
 								</h6>
 								<form class="pt-3">
 									<div class="form-group">
-										<input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username"/>
+										<input type="text" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="Username"/>
 									</div>
 									<div class="form-group">
-										<input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password"/>
+										<input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Email"/>
 									</div>
+									<!-- 		<div class="form-group">
+												<input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password"/>
+											</div> -->
 									<div class="mt-3">
-										<a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="./index.html">
+										<a id="btn_inicio" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="./index.html">
 											SIGN IN
 										</a>
 									</div>
@@ -72,7 +79,7 @@
 									</div> -->
 									<div class="text-center mt-4 font-weight-light">
 										Don't have an account?
-										<a href="register.html" class="text-primary">
+										<a  href="register.html" class="text-primary">
 											Create
 										</a>
 									</div>
@@ -95,6 +102,10 @@
 		<script src="./assets/js/off-canvas.js"></script>
 		<script src="./assets/js/hoverable-collapse.js"></script>
 		<script src="./assets/js/misc.js"></script>
+		<script src="./js/cooke/cooke.js"></script>
+		<script src="./js/LocalDB/LocalDB.js">
+		</script>
+		<script src="./js/inicio/inicio.js"></script>
 		<!-- endinject -->
 	</body>
 </html>
