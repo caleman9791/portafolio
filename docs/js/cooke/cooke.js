@@ -47,9 +47,17 @@ function obtenerUltimoValorURLSinExtension() {
 window.addEventListener("load", function () {
 	var ultimoValor = obtenerUltimoValorURLSinExtension();
 	// agregarScript(ultimoValor);
-	if (ultimoValor != "login" || ultimoValor != "register") {
+	console.log(ultimoValor);
+
+	if (ultimoValor.toLowerCase == "inicio") {
+		alert("message?: DOMString");
+	}
+	if (ultimoValor.toLowerCase == "registro") {
+		alert("message?: DOMString");
+	}
+	if (!(ultimoValor.toLowerCase == "inicio") || !(ultimoValor.toLowerCase == "registro")) {
 		if (existeCookie("USER")) {
-			// console.log(window.cookie);
+
 			console.log(getCookieValue("USER"));
 		} else {
 			let mensaje_no_cooke = document.querySelector(".mensaje_no_cooke");

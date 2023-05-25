@@ -37,7 +37,7 @@ function obtenerUltimoValorURLSinExtension() {
 
 }
 var ultimoValor = obtenerUltimoValorURLSinExtension();
-agregarScript(ultimoValor);
+// agregarScript(ultimoValor);
 
 // //////////////////////////////////////////////////////////////////////////////////////
 
@@ -51,7 +51,9 @@ window.addEventListener("load", function (event) {
 	// console.log(ultimoValor); // Imprime el último valor de la URL en la consola
 	// let ultimoValor = obtenerUltimoValorURLSinExtension();
 	//  Al cargar #Inicio  
-	if (ultimoValor != "login" || ultimoValor != "register") {
+	var ultimoValor = obtenerUltimoValorURLSinExtension();
+	// agregarScript(ultimoValor);
+	if (!(ultimoValor.toLowerCase == "inicio") || !(ultimoValor.toLowerCase == "registro")) {
 		if (existeCookie("USER") == false) {
 			// window.location.href = "./login.html";
 		}
